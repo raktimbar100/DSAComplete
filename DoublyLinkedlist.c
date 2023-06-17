@@ -236,12 +236,16 @@ void reverse()
 	present=head;
 	while(present!=NULL)
 	{
-//		future=present->next;
-//		present->prev=past;
-//		present->next=future->prev;
-//		past=present;
-//		present=future;
+		future=present->next;
+		present->prev=future;
+		present->next=past;
+		past=present;
+		present=future;
+		
+		
 	}
+	head=past;
+	
 }
 int main()
 {
